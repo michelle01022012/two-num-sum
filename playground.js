@@ -3,10 +3,10 @@ const target = 13
 
 const map = new Map();
 
-for (let i = 0; i < nums.length; ++i) {
-  map.set(nums[i], true)
-
-  if (nums[i] === 9) {
-    console.log(map.get(4)) // O(1) time
+for (let i = 0; i < nums.length -1;  ++i) {
+  console.log(`loop ${i}`)
+  for (let j = i + 1; j < nums.length; ++j) {
+    console.log(nums [i], nums[j])
+  
   }
 }
