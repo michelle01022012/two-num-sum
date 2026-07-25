@@ -10,11 +10,26 @@
  * 0(n^) time | 0(1) space
  */
 
-// sorting solution 80k - 100 k
+// Optimal Solution
 const containsDuplicate = (nums) => {
-    const sortedArr = nums.sort((a,b) => a - b)
+    const set = new Set()
 
-    for (let i = 0; i < sortedArr.length -1; ++i) {
+    for (let i = 0; i < nums.length; ++i) {
+        if (set.has(nums[i])) {
+            return true
+        }
+        set.add(nums[i]) {
+            return true
+        }
+    return false;
+}
+
+// sorting solution 80k - 100 k
+// 0(nlog(n)) time | 0(n) space
+const containsDuplicate = (nums) => {
+    const sortedArr = nums.sort((a,b) => a - b) //0(n) space | 0(nlog(n)) time
+
+    for (let i = 0; i < sortedArr.length -1; ++i) { // 0(n) time
         if (sortedArr[i] === sortedArr[i + 1]) {
             return true;
         }
