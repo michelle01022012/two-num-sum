@@ -26,15 +26,15 @@ const containsDuplicate = (nums) => {
 // sorting solution 80k - 100 k
 // 0(nlog(n)) time | 0(n) space
 //const containsDuplicate = (nums) => {
-  const sortedArr = nums.sort((a,b) => a - b) //0(n) space | 0(nlog(n)) time
-
-    for (let i = 0; i < sortedArr.length -1; ++i) { // 0(n) time
-        if (sortedArr[i] === sortedArr[i + 1]) {
-            return true;
-        }
-    }
-    return false;
-}
+//  const sortedArr = nums.sort((a,b) => a - b) //0(n) space | 0(nlog(n)) time
+//
+//    for (let i = 0; i < sortedArr.length -1; ++i) { // 0(n) time
+//        if (sortedArr[i] === sortedArr[i + 1]) {
+//            return true;
+//        }
+//    }
+//    return false;
+//}
 //const containsDuplicate = (nums) => {
 //  for (let i = 0; i < nums.length -1; ++1) {
 //       for (let j = i +1; i < nums.length)
