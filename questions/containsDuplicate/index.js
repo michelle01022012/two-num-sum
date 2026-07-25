@@ -11,6 +11,9 @@
  */
 
 const containsDuplicate = (nums) => {
+    for (let i = 0; i < nums.length -1; ++1) {
+        for (let j = i +1; i < nums.length)
+    }
 
 }
 
