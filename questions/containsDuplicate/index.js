@@ -11,11 +11,11 @@
  */
 
 // Optimal Solution
-const containsDuplicate = (nums) => {
+const containsDuplicate = (nums) => { // 0(n) space
     const map = new Map()
 
-    for (let i = 0; i < nums.length; ++i) {
-        if (map.has(nums[i])) {
+    for (let i = 0; i < nums.length; ++i) { // 0(n) time
+        if (map.has(nums[i])) { // 0(1) time
             return true
         }
        set.add(nums[i], true)
