@@ -18,9 +18,8 @@ const containsDuplicate = (nums) => {
         if (set.has(nums[i])) {
             return true
         }
-        set.add(nums[i]) {
-            return true
-        }
+       set.add(nums[i])
+}
     return false;
 }
 
