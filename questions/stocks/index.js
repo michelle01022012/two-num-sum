@@ -10,10 +10,24 @@
  * stocks([2, 9, 18, 9, 2]) ->  16
  */
 
+//OPTIMAL SOLUTION
 const stocks = (prices) => {
-   
+   let l = 0;
+   let r = 1;
+   let maxProfit = 0
+
+   while (r < prices.length) {
+      const profit = prices[r] - prices[l]
+      if (profit > 0) {
+         maxProfit = Math.max(maxProfit, profit)
+      }
+      else {
+         l = r
+      }
+      ++r;
+   }
+
+   return maxProfit
 }
 
-
-//DO NOT EDIT BELOW THIS LINE
-module.exports = stocks;
+// FOR LOOP SOLUTION
