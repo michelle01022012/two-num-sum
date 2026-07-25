@@ -7,14 +7,28 @@
  * containsDuplicate([1, 2, 3, 4]) -> false
  * containsDuplicate([1, 2, 2, 5]) -> true
  * containsDuplicate([1, 2, 9, 5, 9]) -> true
- * 
+ * 0(n^) time | 0(1) space
  */
 
+// sorting solution 80k - 100 k
 const containsDuplicate = (nums) => {
-    for (let i = 0; i < nums.length -1; ++1) {
-        for (let j = i +1; i < nums.length)
-    }
+    const sortedArr = nums.sort((a,b)) => a - b)
 
+    for (let i = 0; i < sortedArr.length -1; ++i) {
+        if (sortedArr[i] === sortedArr[i + 1]) {
+            return true;
+        }
+    }
+    return false;
 }
+//const containsDuplicate = (nums) => {
+//  for (let i = 0; i < nums.length -1; ++1) {
+//       for (let j = i +1; i < nums.length)
+//          if (nums[i] ===nums[j]) {
+//             return true;
+//    }
+//   }
+//   return false;
+//}
 
 module.exports = containsDuplicate;
