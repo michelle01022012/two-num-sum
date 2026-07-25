@@ -25,8 +25,8 @@ const containsDuplicate = (nums) => {
 
 // sorting solution 80k - 100 k
 // 0(nlog(n)) time | 0(n) space
-const containsDuplicate = (nums) => {
-    const sortedArr = nums.sort((a,b) => a - b) //0(n) space | 0(nlog(n)) time
+//const containsDuplicate = (nums) => {
+  const sortedArr = nums.sort((a,b) => a - b) //0(n) space | 0(nlog(n)) time
 
     for (let i = 0; i < sortedArr.length -1; ++i) { // 0(n) time
         if (sortedArr[i] === sortedArr[i + 1]) {
