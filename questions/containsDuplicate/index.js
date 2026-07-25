@@ -18,7 +18,7 @@ const containsDuplicate = (nums) => {
         if (map.has(nums[i])) {
             return true
         }
-       set.add(nums[i])
+       set.add(nums[i], true)
 }
     return false;
 }
