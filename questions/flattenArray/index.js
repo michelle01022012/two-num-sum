@@ -12,23 +12,20 @@
  */
 
  const flatten = (nums) => {
-  const result = []
-
-  const flattenHelper = (nums) => {
-    for (elem of nums){
-      if (Array.isArray(elem)){
-        flattenHelper(elem)
-      }else{
-        result.push(elem)
-      }
-    }
-  }
-
-  flattenHelper(nums)
-
-  return result
-
-
+   const flattened = [];
+ 
+   const flattenHelper = (nums) => {
+     for (elem of nums) {
+       if (Array.isArray(elem)) {
+         flattenHelper(elem);
+       } else {
+         flattened.push(elem);
+       }
+     }
+   };
+   flattenHelper(nums);
+ 
+   return flattened;
  };
 
 module.exports = flatten; 
